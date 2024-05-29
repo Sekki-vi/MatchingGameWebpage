@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Matching Game</title>
+    </head>
+    <body>
+        <h2>Select Board Size</h2>
+        <form id="redirectForm">
+            <label>
+                <input type="radio" name="redirectOption" value="board1">
+                8 pairs
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="redirectOption" value="board2">
+                10 pairs
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="redirectOption" value="board3">
+                12 pairs
+            </label>
+            <br>
+            <button type="button" onclick="redirectToSelectedPage()">Start Game</button>
+            <br>
+            <br>
+            <br>
+        </form>
+    
+        <script>
+            function redirectToSelectedPage() {
+                const form = document.getElementById("redirectForm");
+                const selectedOption = form.querySelector('input[name="redirectOption"]:checked');
+    
+                if (selectedOption) {
+                    const redirectValue = selectedOption.value;
+                    window.location.href = `${redirectValue}.html`;
+                } else {
+                    alert("Please select an option before submitting.");
+                }
+            }
+        </script>
+    </body>
+</html>

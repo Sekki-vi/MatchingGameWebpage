@@ -1,0 +1,32 @@
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#game-container {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    text-align: center;
+}
+  
+.card {
+    width: 100px;
+    height: 146px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('assets/backcard.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    background-color: #222;
+    color: #fff;
+}
